@@ -25,7 +25,7 @@ test('test first', async({page}) => {
    await page.fill('textarea[class="list-card-composer-textarea js-card-title"]', 'My new card');
    await page.click('input[class="nch-button nch-button--primary confirm mod-compact js-add-card"]');
    await page.getByRole('button', { name: 'Add list' }).click();
-   await page.getByRole('link', { name: ' Add a card' }).click();
+   await page.getByRole('link', { name: ' Add a card' }).click();
    await page.getByPlaceholder('Enter a title for this card…').click();
    await page.getByPlaceholder('Enter a title for this card…').fill('my new 2');
    await page.getByRole('button', { name: 'Add card' }).click();
@@ -39,7 +39,7 @@ test('test first', async({page}) => {
    await page.mouse.move(dragAndDrop.point.x, dragAndDrop.point.y);
    await page.mouse.down(dragAndDrop);
    await page.mouse.move(listBBoundingBox.x + 10, listBBoundingBox.y + 10);
-   await page.mouse.up();
+   await page.mouse.up(); 
    
    /************************Get the x and y coordinates of the card that you moved***************************/
    await page.waitForSelector('//body[1]/div[1]/div[2]/div[1]/div[1]/main[1]/div[1]/div[2]/div[2]/div[1]/div[1]/div[3]/div[2]/div[2]/div[1]');
